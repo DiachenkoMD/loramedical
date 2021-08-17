@@ -24,6 +24,7 @@
       margin-bottom: 25px;
       img {
         border-radius: 10px;
+        max-width: 100%;
       }
     }
     &__title {
@@ -64,18 +65,19 @@
     margin-top: 40px;
     font-size: 16px;
     line-height: 20px;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     width: 235px;
     height: 60px;
-    background: #EE1C42;
+    background: #ee2b49;
     box-shadow: 0px 4px 15px rgba(220, 45, 77, 0.25);
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none !important;
+    transition: .15s;
     &:hover {
-      text-decoration: none;
-      color: #FFF;
+      background: #ee0a45 !important;
     }
   }
 }

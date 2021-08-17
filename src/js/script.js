@@ -61,7 +61,19 @@ let sidebarMobile = document.querySelectorAll('.sidebar')[0];
 navBtn.addEventListener('click', function() {
   navBtn.classList.toggle('nav-toggle-active'),
   sidebarMobile.classList.toggle('sidebar-mob')
+  
+  // If mobile sidebar layout is active
+  if(window.innerWidth <= 992){
+     // When we open the sidebar, we always toggle that class, so to check if sidebar is open, we can just check for having class
+     if(sidebarMobile.classList.contains("sidebar-mob")){
+        document.body.style.overflow = "hidden";
+     }else{
+        document.body.style.overflow = "auto";
+     }
+  }
 });
+
+
 
 new Swiper('.why-we-slider', {
   slidesPerView: 2,
@@ -88,7 +100,7 @@ new Swiper('.why-we-slider', {
 
 
 const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   // centerSlides: true,
   pagination: {
@@ -145,3 +157,5 @@ function openModalWindow() {
 function closeModalWindow() {
   modal.style.display = "none";
 }
+
+
