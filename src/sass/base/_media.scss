@@ -767,7 +767,7 @@
       .sidebar {
         &-tel {
           a {
-            font-size: 13px;
+            font-size: 10px;
           }
         }
       }
@@ -776,6 +776,7 @@
       &-list {
         &__item {
           max-width: 130px;
+          font-size: 12px !important;
         }
       }
     }
