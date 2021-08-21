@@ -44,7 +44,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('html', function () {
-    return gulp.src("src/*.html")
+    return gulp.src("src/**/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"));
 });
@@ -74,4 +74,4 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
